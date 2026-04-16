@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Table(name = "PRICES")
 @Data
 public class PriceEntity {
+    @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
