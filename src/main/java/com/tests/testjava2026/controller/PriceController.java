@@ -1,8 +1,8 @@
 package com.tests.testjava2026.controller;
 
 import com.tests.testjava2026.application.usecase.GetApplicablePriceUseCase;
-import com.tests.testjava2026.domain.price.PriceEntity;
-import com.tests.testjava2026.domain.price.PriceResponse;
+import com.tests.testjava2026.domain.model.Price;
+import com.tests.testjava2026.infrastructure.adapter.in.web.dto.PriceResponse;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.validation.annotation.Validated;
 
 
 import java.time.LocalDateTime;
@@ -49,18 +48,18 @@ public class PriceController {
             @Parameter(description = "Brand identifier (Brand)", example = "1")
             @RequestParam("brandId") @NotNull(message = "Brand ID is mandatory") @Positive(message = "Brand ID must be a positive number") Integer brandId) {
 
-        PriceEntity priceEntity = getApplicablePriceUseCase.execute(brandId, productId, applyDate);
-        return ResponseEntity.ok(mapToResponse(priceEntity));
+        Price price = getApplicablePriceUseCase.execute(brandId, productId, applyDate);
+        return ResponseEntity.ok(mapToResponse(price));
     }
 
-    private PriceResponse mapToResponse(PriceEntity priceEntity) {
+    private PriceResponse mapToResponse(Price price) {
         return PriceResponse.builder()
-                .productId(priceEntity.getProductId())
-                .brandId(priceEntity.getBrandId())
-                .priceList(priceEntity.getPriceList())
-                .startDate(priceEntity.getStartDate())
-                .endDate(priceEntity.getEndDate())
-                .price(priceEntity.getPrice())
+                .productId(price.getProductId())
+                .brandId(price.getBrandId())
+                .priceList(price.getPriceList())
+                .startDate(price.getStartDate())
+                .endDate(price.getEndDate())
+                .price(price.getPrice())
                 .build();
     }
 

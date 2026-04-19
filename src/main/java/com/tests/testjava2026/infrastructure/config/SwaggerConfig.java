@@ -1,4 +1,4 @@
-package com.tests.testjava2026.infraestructure.config;
+package com.tests.testjava2026.infrastructure.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -14,12 +14,12 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API de Precios - BCNC Group")
+                        .title("API Prices - BCNC Group")
                         .version("1.0.0")
-                        .description("Servicio para la consulta de tarifas aplicables por producto, cadena y fecha.")
+                        .description("Service for consulting applicable prices by product, chain and date.")
                         .contact(new Contact()
-                                .name("Tu Nombre")
-                                .email("tu.email@example.com"))
+                                .name("Javier Sivianes")
+                                .email("javier@sivianes.com"))
                         .license(new License()
                                 .name("Apache 2.0")
                                 .url("http://springdoc.org")));
