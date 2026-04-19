@@ -1,4 +1,4 @@
-package com.tests.testjava2026.domain;
+package com.tests.testjava2026.domain.price;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

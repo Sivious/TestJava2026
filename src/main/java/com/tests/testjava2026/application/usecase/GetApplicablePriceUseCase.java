@@ -1,6 +1,6 @@
 package com.tests.testjava2026.application.usecase;
 
-import com.tests.testjava2026.domain.PriceEntity;
+import com.tests.testjava2026.domain.price.PriceEntity;
 
 import java.time.LocalDateTime;
 

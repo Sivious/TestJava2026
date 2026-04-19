@@ -1,4 +1,4 @@
-package com.tests.testjava2026.domain.DTO;
+package com.tests.testjava2026.domain.price;
 
 import lombok.Builder;
 import lombok.Data;

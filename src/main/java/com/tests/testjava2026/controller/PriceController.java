@@ -1,8 +1,8 @@
 package com.tests.testjava2026.controller;
 
 import com.tests.testjava2026.application.usecase.GetApplicablePriceUseCase;
-import com.tests.testjava2026.domain.DTO.PriceResponse;
-import com.tests.testjava2026.domain.PriceEntity;
+import com.tests.testjava2026.domain.price.PriceResponse;
+import com.tests.testjava2026.domain.price.PriceEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;

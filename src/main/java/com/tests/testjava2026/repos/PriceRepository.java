@@ -1,6 +1,6 @@
 package com.tests.testjava2026.repos;
 
-import com.tests.testjava2026.domain.PriceEntity;
+import com.tests.testjava2026.domain.price.PriceEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
