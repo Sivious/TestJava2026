@@ -31,7 +31,7 @@ public class PriceController {
     private final GetApplicablePriceUseCase getApplicablePriceUseCase;
 
     @Operation(
-            summary = "Get applyed price",
+            summary = "Get applied price",
             description = "Get the price with the highest priority value for a product, brand and date."
     )
     @ApiResponses(value = {
